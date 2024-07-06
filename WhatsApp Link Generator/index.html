@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhatsApp Link Generator</title>
+    <link rel="stylesheet" href="whatsapp-link-generator.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1><i class="fab fa-whatsapp"></i> WhatsApp Link Generator</h1>
+        <div class="input-group">
+            <i class="fas fa-phone-alt"></i>
+            <input type="text" id="phone" placeholder="Enter phone number (e.g., 628123456789)">
+            <small id="phone-error" class="error-message"></small>
+        </div>
+        <div class="input-group">
+            <i class="fas fa-comment-dots"></i>
+            <textarea id="message" placeholder="Enter your message"></textarea>
+            <small id="message-error" class="error-message"></small>
+        </div>
+        <button onclick="generateLink()"><i class="fas fa-link"></i> Generate Link</button>
+        <div id="output" class="output"></div>
+        <button class="back-button" onclick="goBack()">Back</button>
+    </div>
+    <script src="whatsapp-link-generator.js"></script>
+</body>
+</html>

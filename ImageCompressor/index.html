@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Compressor</title>
+    <link rel="stylesheet" href="image-compressor.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <div class="compressor-container">
+        <h1><i class="fas fa-compress"></i> Image Compressor</h1>
+        <input type="file" id="imageInput" accept="image/*">
+        <button onclick="compressImage()">Compress Image</button>
+        <canvas id="canvas" style="display: none;"></canvas>
+        <div id="output" class="output"></div>
+        <button class="back-button" onclick="goBack()">Back</button>
+    </div>
+    <script src="image-compressor.js"></script>
+</body>
+</html>

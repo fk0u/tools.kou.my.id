@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date Calculator</title>
+    <link rel="stylesheet" href="DateCalculator.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1><i class="fas fa-calendar-alt"></i> Date Calculator</h1>
+        <div class="input-group">
+            <label for="date1">Select First Date</label>
+            <input type="date" id="date1" required>
+            <small id="date1-error" class="error-message"></small>
+        </div>
+        <div class="input-group">
+            <label for="date2">Select Second Date</label>
+            <input type="date" id="date2" required>
+            <small id="date2-error" class="error-message"></small>
+        </div>
+        <button onclick="calculateDifference()"><i class="fas fa-calculator"></i> Calculate Difference</button>
+        <div class="input-group">
+            <label for="startDate">Start Date</label>
+            <input type="date" id="startDate" required>
+        </div>
+        <div class="input-group">
+            <input type="number" id="days" placeholder="Enter number of days to add/subtract" required>
+            <small id="days-error" class="error-message"></small>
+        </div>
+        <button onclick="calculateNewDate()"><i class="fas fa-calendar-plus"></i> Calculate New Date</button>
+        <div id="output" class="output"></div>
+        <button class="back-button" onclick="goBack()">Back</button>
+    </div>
+    <script src="DateCalculator.js"></script>
+</body>
+</html>

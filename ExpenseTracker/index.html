@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="ExpenseTracker.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body onload="loadExpenses()">
+    <div class="container">
+        <h1><i class="fas fa-money-check-alt"></i> Expense Tracker</h1>
+        <div class="input-group">
+            <input type="text" id="expenseName" placeholder="Expense Name">
+            <input type="number" id="expenseAmount" placeholder="Amount">
+            <button onclick="addExpense()"><i class="fas fa-plus"></i> Add Expense</button>
+        </div>
+        <ul id="expenseList" class="expense-list"></ul>
+        <div id="total" class="total"></div>
+        <button class="back-button" onclick="goBack()">Back</button>
+    </div>
+    <script src="ExpenseTracker.js"></script>
+</body>
+</html>

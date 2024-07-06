@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="PasswordGenerator.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1><i class="fas fa-key"></i> Password Generator</h1>
+        <div class="input-group">
+            <input type="number" id="length" placeholder="Enter length (8-128)" min="8" max="128" required>
+            <small id="length-error" class="error-message"></small>
+        </div>
+        <div class="input-group">
+            <label><input type="checkbox" id="includeUppercase"> Include Uppercase</label>
+        </div>
+        <div class="input-group">
+            <label><input type="checkbox" id="includeLowercase"> Include Lowercase</label>
+        </div>
+        <div class="input-group">
+            <label><input type="checkbox" id="includeNumbers"> Include Numbers</label>
+        </div>
+        <div class="input-group">
+            <label><input type="checkbox" id="includeSymbols"> Include Symbols</label>
+        </div>
+        <button onclick="generatePassword()"><i class="fas fa-random"></i> Generate Password</button>
+        <div id="output" class="output"></div>
+        <button class="back-button" onclick="goBack()">Back</button>
+    </div>
+    <script src="PasswordGenerator.js"></script>
+</body>
+</html>

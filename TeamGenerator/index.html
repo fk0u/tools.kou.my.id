@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Generator</title>
+    <link rel="stylesheet" href="team-generator.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1><i class="fas fa-users"></i> Team Generator</h1>
+        <div class="input-group">
+            <textarea id="names" placeholder="Enter names separated by new lines"></textarea>
+            <small id="names-error" class="error-message"></small>
+        </div>
+        <div class="input-group">
+            <input type="number" id="teamCount" placeholder="Enter number of teams">
+            <small id="teamCount-error" class="error-message"></small>
+        </div>
+        <div class="input-group">
+            <label for="fileInput" class="file-label"><i class="fas fa-file-upload"></i> Import Names</label>
+            <input type="file" id="fileInput" accept=".txt, .csv, .xls, .xlsx, .doc, .docx" onchange="importNames()">
+            <small id="file-error" class="error-message"></small>
+        </div>
+        <button onclick="generateTeams()"><i class="fas fa-random"></i> Generate Teams</button>
+        <div id="output" class="output"></div>
+        <button class="back-button" onclick="goBack()">Back</button>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.9/xlsx.full.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/papaparse/5.3.0/papaparse.min.js"></script>
+    <script src="team-generator.js"></script>
+</body>
+</html>

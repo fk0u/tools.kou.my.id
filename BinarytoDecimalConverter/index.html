@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Binary to Decimal Converter</title>
+    <link rel="stylesheet" href="binary-to-decimal.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <div class="converter-container">
+        <h1><i class="fas fa-exchange-alt"></i> Binary & Decimal Converter</h1>
+        <div class="converter">
+            <select id="inputType">
+                <option value="binary">Binary</option>
+                <option value="decimal">Decimal</option>
+            </select>
+            <span>></span>
+            <select id="outputType">
+                <option value="decimal">Decimal</option>
+                <option value="binary">Binary</option>
+            </select>
+        </div>
+        <input type="text" id="inputValue" placeholder="Enter value">
+        <button onclick="convert()">Generate</button>
+        <div id="output" class="output"></div>
+        <button class="back-button" onclick="goBack()">Back</button>
+    </div>
+    <script src="binary-to-decimal.js"></script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit Converter</title>
+    <link rel="stylesheet" href="UnitConverter.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1><i class="fas fa-ruler"></i> Unit Converter</h1>
+        <div class="input-group">
+            <input type="number" id="value" placeholder="Enter value" required>
+            <small id="value-error" class="error-message"></small>
+        </div>
+        <div class="input-group">
+            <select id="unitType" onchange="populateUnits()" required>
+                <option value="">Select Unit Type</option>
+                <option value="length">Length</option>
+                <option value="weight">Weight</option>
+                <option value="volume">Volume</option>
+                <option value="temperature">Temperature</option>
+            </select>
+            <small id="unitType-error" class="error-message"></small>
+        </div>
+        <div class="input-group">
+            <select id="fromUnit" required>
+                <option value="">From Unit</option>
+            </select>
+            <small id="fromUnit-error" class="error-message"></small>
+        </div>
+        <div class="input-group">
+            <select id="toUnit" required>
+                <option value="">To Unit</option>
+            </select>
+            <small id="toUnit-error" class="error-message"></small>
+        </div>
+        <button onclick="convertUnit()"><i class="fas fa-exchange-alt"></i> Convert</button>
+        <div id="output" class="output"></div>
+        <button class="back-button" onclick="goBack()">Back</button>
+    </div>
+    <script src="UnitConverter.js"></script>
+</body>
+</html>
