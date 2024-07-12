@@ -25,9 +25,11 @@ body {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     text-align: center;
     width: 90%;
-    max-width: 400px;
+    max-width: 600px; /* Ditingkatkan lebar maksimum */
     animation: fadeIn 1s ease-in-out;
     transition: transform 0.2s ease;
+    overflow-y: auto; /* Tambahkan scrolling jika konten terlalu tinggi */
+    max-height: 90vh; /* Tambahkan batas tinggi maksimum */
 }
 
 .container:hover {
@@ -129,8 +131,23 @@ button:hover {
 
 .output {
     margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.kelompok-box {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.kelompok-box strong {
+    display: block;
+    margin-bottom: 10px;
     font-size: 18px;
-    color: #333;
 }
 
 .back-button {

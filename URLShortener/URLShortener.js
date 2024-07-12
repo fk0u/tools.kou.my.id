@@ -8,12 +8,13 @@ async function shortenURL() {
     }
 
     try {
-        const response = await fetch(`https://api.tinyurl.com/create?url=${encodeURIComponent(url)}`, {
+        const response = await fetch('https://api.tinyurl.com/create', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
-                'Authorization': 'Bearer YOUR_TINYURL_API_KEY' // Replace with your TinyURL API key
+                'Authorization': 'Bearer KFm6Pjod2oOyEkuLvcfOMizvJWzCUuUQq3fhSpBEOXbqAafRYplOrcU6q7TX' // Ganti dengan API key Anda
             },
+            body: JSON.stringify({ url })
         });
 
         if (!response.ok) {

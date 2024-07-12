@@ -12,19 +12,20 @@
     <div class="container">
         <h1><i class="fas fa-users"></i> Team Generator</h1>
         <div class="input-group">
-            <textarea id="names" placeholder="Enter names separated by new lines"></textarea>
+            <textarea id="nama" placeholder="Enter names separated by new lines or commas"></textarea>
             <small id="names-error" class="error-message"></small>
         </div>
         <div class="input-group">
-            <input type="number" id="teamCount" placeholder="Enter number of teams">
+            <input type="number" id="jumlah-kelompok" placeholder="Enter number of teams">
             <small id="teamCount-error" class="error-message"></small>
         </div>
         <div class="input-group">
             <label for="fileInput" class="file-label"><i class="fas fa-file-upload"></i> Import Names</label>
-            <input type="file" id="fileInput" accept=".txt, .csv, .xls, .xlsx, .doc, .docx" onchange="importNames()">
+            <input type="file" id="fileInput" accept=".txt, .csv, .xls, .xlsx, .doc, .docx">
             <small id="file-error" class="error-message"></small>
         </div>
-        <button onclick="generateTeams()"><i class="fas fa-random"></i> Generate Teams</button>
+        <button onclick="generateKelompok()"><i class="fas fa-random"></i> Generate Teams</button>
+        <button onclick="generateUlang()"><i class="fas fa-sync-alt"></i> Regenerate Teams</button>
         <div id="output" class="output"></div>
         <button class="back-button" onclick="goBack()">Back</button>
     </div>
